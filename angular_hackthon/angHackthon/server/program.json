@@ -1,0 +1,16 @@
+{
+  "programs": [
+    {
+      "id": 0,
+      "name": "45dayFitness",
+      "duration": 45,
+      "cost": 3000
+    },
+    {
+      "id": 2,
+      "name": "30 day streak",
+      "duration": 30,
+      "cost": "4000"
+    }
+  ]
+}

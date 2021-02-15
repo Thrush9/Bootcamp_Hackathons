@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Programs</a>
+          </li>
+      </ul>
+      <a class="navbar-brand mr-auto" href="#">Goldies Gym</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Gym Location" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <button class="btn btn-light ml-2 my-sm-0" type="submit">Sign Up</button>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div>
+      <!-- <div mat-subheader>List of Programs</div> -->
+      <h2>List of Programs</h2>
+      <mat-list class="program-details">    
+          <mat-list-item *ngFor="let pgm of pgmList">
+            <mat-icon mat-list-icon>folder</mat-icon>
+            <div mat-line> Name : {{pgm.name}}</div>
+            <div mat-line> Duration : {{pgm.duration}} days</div>
+            <div mat-line> Cost : {{pgm.cost}} Rs/-</div>
+          </mat-list-item>
+        </mat-list>
+    </div> 
+
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header class="bg-secondary">
+            <mat-panel-title >
+             Add Program
+            </mat-panel-title>
+            <mat-panel-description>
+              Program Details
+            </mat-panel-description>
+            <mat-icon>account_circle</mat-icon>
+          </mat-expansion-panel-header>
+      
+         <div class="form-field">
+          <mat-form-field>
+            <mat-label>Program Id</mat-label>
+            <input matInput type="number" [(ngModel)]="pgmObj.id">
+          </mat-form-field>  
+          <mat-form-field>
+            <mat-label>Program Name</mat-label>
+            <input matInput type="text" [(ngModel)]="pgmObj.name">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Program Duration</mat-label>
+            <input matInput type="number" [(ngModel)]="pgmObj.duration">
+          </mat-form-field> 
+          <mat-form-field>
+            <mat-label>Program cost</mat-label>
+            <input matInput type="text" [(ngModel)]="pgmObj.cost">
+          </mat-form-field>
+         </div>
+          <mat-action-row class="bg-secondary">
+            <button mat-raised-button color="basic" (click) = "addProgram()">Add</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+    
+      
+         
+ 
+
+</div>
+<footer class="bg-dark"> All Rights are Reserved </footer>

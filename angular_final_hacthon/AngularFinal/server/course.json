@@ -1,0 +1,19 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "domain": "Java",
+      "coursename": "Core Java"
+    },
+    {
+      "id": "2",
+      "domain": "Angular",
+      "coursename": "Angular 10"
+    },
+    {
+      "id": "3",
+      "domain": "Javascript",
+      "coursename": "JS - ES5&ES6"
+    }
+  ]
+}
